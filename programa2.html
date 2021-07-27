@@ -1,0 +1,32 @@
+<canvas width="600" heigth="400"></canvas>
+
+<h1>TABULEIRO BASICO PARA TESTE</h1>
+
+Mundo Antigo
+Os primeiros jogos de tabuleiro registrados são datados em cerca de 7.000 anos a.C., e o jogo mais antigo conhecido chama-se “Mancala”, com origem africana. ... Assim como o Senet, outro jogo semelhante, ele é conhecido como o inspirador de um jogo bem conhecido e atual: o Gamão.
+
+<script>
+	
+	function desenhaquadrado(x, y, cor) {
+	
+	var tela = document.querySelector("canvas");
+	var pincel = tela.getContext("2d");
+
+	pincel.fillStyle = cor;
+	pincel.fillRect(x, y, 50, 50);
+	pincel.fillStroke = "black"
+	pincel.strokeRect(x, y, 50, 50);
+	
+}
+
+for (var x = 0; x < 400; x = x + 50) {
+	
+	desenhaquadrado(x, 0, "red");
+	desenhaquadrado(x, 50, "blue");
+	desenhaquadrado(x, 100, "green");
+
+
+}
+
+
+</script>
